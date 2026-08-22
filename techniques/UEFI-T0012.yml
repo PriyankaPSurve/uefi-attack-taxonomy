@@ -1,0 +1,60 @@
+id: UEFI-T0012
+name: Network Attacks
+type: technique
+tactic: UEFI-TA9003
+version_added: "1.0"
+description: >
+  The threat actor initiates communication with a network-connected target to
+  gain access
+evidence:
+  - name: "TrickBot's new 'TrickBoot' module infects your UEFI firmware"
+    year: 2020
+    references:
+      - https://www.bleepingcomputer.com/news/security/trickbots-new-trickboot-module-infects-your-uefi-firmware/
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+  - name: DerStarke v1.4 RC1 - IVVRR Checklist
+    year: 2017
+    references:
+      - https://wikileaks.org/vault7/darkmatter/document/DerStarke_v1_4_RC1_IVVRR_Checklist/
+countermeasures:
+  - id: PM-01-13
+    name: Disable legacy protocols and services
+    applicability: 2
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 1
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-05
+    name: Verify integrity of update tools
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-02-02
+    name: Disable compromised update paths
+    applicability: 1
+risk:
+  impact: 2
+  likelihood: 5
+  effectiveness: 1.36
+  level: Moderate

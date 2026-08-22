@@ -1,0 +1,45 @@
+id: UEFI-T0039
+name: Physical Memory Dump
+type: technique
+tactic: UEFI-TA9010
+version_added: "1.0"
+description: >
+  Attackers with access to a system's physical memory perform memory dumps to
+  collect data stored in RAM. This data can include UEFI variables, SMM data,
+  or other sensitive information present in memory during the boot process
+evidence:
+  - name: Are you giving firmware attackers a free pass
+    year: 2015
+countermeasures:
+  - id: PM-01-06
+    name: Encrypt sensitive memory areas
+    applicability: 2
+  - id: PM-01-07
+    name: Memory access control
+    applicability: 2
+  - id: PM-01-12
+    name: Full-disk encryption
+    applicability: 1
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 1
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 2
+  - id: DM-01-03
+    name: Scan for unauthorized memory access patterns
+    applicability: 1
+  - id: DM-01-04
+    name: Monitor for memory patching attempts
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+risk:
+  impact: 2
+  likelihood: 3
+  effectiveness: 1.33
+  level: Low

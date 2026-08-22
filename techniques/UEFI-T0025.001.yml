@@ -1,0 +1,74 @@
+id: UEFI-T0025.001
+name: Secure Boot Bypass
+type: sub-technique
+tactic: UEFI-TA9006
+parent: UEFI-T0025
+version_added: "1.0"
+description: >
+  Secure Boot ensures that only trusted and signed firmware, bootloaders, and
+  drivers are executed during the boot process. Vulnerabilities in Secure
+  Boot implementation enables threat actors to load and execute unsigned or
+  malicious code, bypassing the integrity checks performed by Secure Boot
+evidence:
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+  - name: "FinSpy: unseen findings"
+    year: 2021
+    references:
+      - https://securelist.com/finspy-unseen-findings/104322/
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 3
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 2
+  - id: PM-01-10
+    name: Regularly update DBX database
+    applicability: 2
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 2
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-04-01
+    name: Disable UEFI Version Rollback
+    applicability: 1
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 2
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-04-06
+    name: Check signature before applying UEFI update
+    applicability: 1
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 3
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 1
+  - id: RM-01-02
+    name: Reissue cryptographic keys
+    applicability: 2
+risk:
+  impact: 4
+  likelihood: 4
+  effectiveness: 1.88
+  level: Very high

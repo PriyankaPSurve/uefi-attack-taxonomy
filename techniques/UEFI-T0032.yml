@@ -1,0 +1,69 @@
+id: UEFI-T0032
+name: Abusing Secure Boot
+type: technique
+tactic: UEFI-TA9008
+version_added: "1.0"
+description: >
+  By exploiting vulnerabilities in secure boot, attackers can inject unsigned
+  code at the firmware level. This results in privilege escalation at the OS
+  level, providing attackers with root-level access
+evidence:
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+  - name: CTR-UEFI Secure Boot Customization
+    year: 2023
+    references:
+      - https://media.defense.gov/2023/Mar/20/2003182401/-1/-1/0/CTR-UEFI-SECURE-BOOT-CUSTOMIZATION-20230317.PDFnote
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 1
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 1
+  - id: PM-01-10
+    name: Regularly update DBX database
+    applicability: 1
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 2
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 2
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-04-06
+    name: Check signature before applying UEFI update
+    applicability: 1
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 2
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 1
+  - id: RM-01-02
+    name: Reissue cryptographic keys
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 3
+  effectiveness: 1.27
+  level: Moderate

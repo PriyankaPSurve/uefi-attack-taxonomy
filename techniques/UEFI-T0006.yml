@@ -1,0 +1,51 @@
+id: UEFI-T0006
+name: Acquire Infrastructure
+type: technique
+tactic: UEFI-TA9002
+version_added: "1.0"
+description: >
+  Adversaries establish infrastructure such as C&C servers to deliver
+  payloads, receive instructions, or maintain persistence within targeted
+  systems
+evidence:
+  - name: Malware delivery through UEFI bootkit with MosaicRegressor
+    year: 2020
+    references:
+      - https://www.kaspersky.com/blog/mosaicregressor-uefi-malware/37252/
+  - name: LoJax UEFI Rootkit Used in Cyberespionage
+    year: 2018
+    references:
+      - https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/lojax-uefi-rootkit-used-in-cyberespionage
+countermeasures:
+  - id: PM-02-01
+    name: Assess and audit vendors in the UEFI supply chain
+    applicability: 1
+  - id: PM-02-02
+    name: Use secure, traceable supply chain method
+    applicability: 1
+  - id: PM-02-03
+    name: Use components from trusted sources only
+    applicability: 1
+  - id: PM-02-04
+    name: 3rd party component integrity check
+    applicability: 1
+  - id: PM-02-05
+    name: Incorporate SBOM into SSDLC
+    applicability: 1
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-03
+    name: Analyze supply chain impact
+    applicability: 1
+risk:
+  impact: 5
+  likelihood: 1
+  effectiveness: 1.00
+  level: Low

@@ -1,0 +1,19 @@
+id: MM-01-03
+name: Analyze supply chain impact
+family: MM-01
+family_name: Incident Response
+category: Mitigation
+version_added: "1.0"
+description: >
+  Analyze supply chain impact. See the referenced guidance for detail.
+references:
+  - https://i.blackhat.com/USA21/Wednesday-Handouts/us-21-Safeguarding-UEFI-Ecosystem-Firmware-Supply-Chain-Is-Hardcoded.pdf
+  - https://uefi.org/sites/default/files/resources/UEFI_VirtualSummit_2022_Tackling_Security_Through_the_Supply_Chain_Draft_Final_v4.pdf
+addresses:
+  - UEFI-T0004.001
+  - UEFI-T0004.002
+  - UEFI-T0004.003
+  - UEFI-T0006
+  - UEFI-T0008.001
+  - UEFI-T0009.001
+  - UEFI-T0009.002

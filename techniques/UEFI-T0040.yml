@@ -1,0 +1,41 @@
+id: UEFI-T0040
+name: UEFI Image Extraction
+type: technique
+tactic: UEFI-TA9010
+version_added: "1.0"
+description: >
+  Attackers attempt to extract the UEFI firmware image from the system for
+  analysis or reverse engineering
+evidence:
+  - name: Moving From Common-Sense Knowledge About UEFI To Actually Dumping UEFI Firmware
+    year: 2020
+countermeasures:
+  - id: PM-01-11
+    name: Lock down SPI flash memory access
+    applicability: 2
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 1
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 4
+  effectiveness: 1.12
+  level: High

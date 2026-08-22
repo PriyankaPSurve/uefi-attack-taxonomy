@@ -1,0 +1,52 @@
+id: UEFI-T0007
+name: Compromise Accounts
+type: technique
+tactic: UEFI-TA9002
+version_added: "1.0"
+description: >
+  Attackers compromise accounts with privileged access to jeopardize the
+  security and integrity of UEFI
+evidence:
+  - name: SHADOWHAMMER AND THE FIRMWARE SUPPLY CHAIN
+    year: 2019
+    references:
+      - https://eclypsium.com/wp-content/uploads/ShadowHammer-and-the-Firmware-Supply-Chain.pdf
+countermeasures:
+  - id: PM-01-13
+    name: Disable legacy protocols and services
+    applicability: 1
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 3
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 3
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 2
+  - id: PM-04-07
+    name: MFA for update process
+    applicability: 2
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-03-01
+    name: Revoke compromised credentials
+    applicability: 3
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 2
+  - id: RM-01-03
+    name: Restore credentials
+    applicability: 2
+risk:
+  impact: 5
+  likelihood: 3
+  effectiveness: 2.18
+  level: Moderate

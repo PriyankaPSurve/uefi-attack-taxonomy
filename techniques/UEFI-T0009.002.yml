@@ -1,0 +1,47 @@
+id: UEFI-T0009.002
+name: Hardware Supply Chain
+type: sub-technique
+tactic: UEFI-TA9003
+parent: UEFI-T0009
+version_added: "1.0"
+description: >
+  Attackers infiltrate the hardware manufacturing process to compromise the
+  hardware components such as the motherboard (SPI chip) and 3rd party
+  components, ensuring their malicious code (e.g., DXE driver) is executed
+  when the hardware is initiated
+evidence:
+  - name: "YET ANOTHER UEFI BOOTKIT DISCOVERED: MEET COSMICSTRAND"
+    year: 2022
+    references:
+      - https://eclypsium.com/blog/yet-another-uefi-bootkit-discovered-meet-cosmicstrand/
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+countermeasures:
+  - id: PM-02-01
+    name: Assess and audit vendors in the UEFI supply chain
+    applicability: 2
+  - id: PM-02-02
+    name: Use secure, traceable supply chain method
+    applicability: 2
+  - id: PM-02-03
+    name: Use components from trusted sources only
+    applicability: 3
+  - id: PM-02-04
+    name: 3rd party component integrity check
+    applicability: 3
+  - id: PM-02-05
+    name: Incorporate SBOM into SSDLC
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-03
+    name: Analyze supply chain impact
+    applicability: 2
+risk:
+  impact: 3
+  likelihood: 4
+  effectiveness: 2.14
+  level: Moderate

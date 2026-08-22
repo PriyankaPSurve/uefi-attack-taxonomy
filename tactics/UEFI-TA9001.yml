@@ -1,0 +1,6 @@
+id: UEFI-TA9001
+name: Reconnaissance
+version_added: "1.0"
+description: >
+  During reconnaissance, a threat actor gathers information about the target.
+  Within the context of UEFI, this process can include the following

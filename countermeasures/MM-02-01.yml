@@ -1,0 +1,13 @@
+id: MM-02-01
+name: Isolate the affected system
+family: MM-02
+family_name: Isolation
+category: Mitigation
+version_added: "1.0"
+description: >
+  Isolate the affected system. See the referenced guidance for detail.
+references:
+  - https://www.cisa.gov/sites/default/files/2024-03/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf
+  - https://uefi.org/sites/default/files/resources/UEFI%20Firmware%20-%20Security%20Concerns%20and%20Best%20Practices.pdf
+addresses:
+  - UEFI-T0011

@@ -1,0 +1,28 @@
+id: PM-03-02
+name: Implement robust Authentication Protocols
+family: PM-03
+family_name: Authentication, Authorization, Access Control
+category: Preventive
+version_added: "1.0"
+description: >
+  Implement robust Authentication Protocols. See the referenced guidance for
+  detail.
+references:
+  - https://uefi.org/specs/UEFI/2.9_A/36_User_Identification.html
+  - https://uefi.org/sites/default/files/resources/2014_UEFI_Plugfest_06_Phoenix.pdf
+addresses:
+  - UEFI-T0005
+  - UEFI-T0006
+  - UEFI-T0007
+  - UEFI-T0008.002
+  - UEFI-T0010
+  - UEFI-T0012
+  - UEFI-T0019
+  - UEFI-T0025.002
+  - UEFI-T0025.003
+  - UEFI-T0025.004
+  - UEFI-T0034
+  - UEFI-T0035
+  - UEFI-T0036
+  - UEFI-T0041
+  - UEFI-T0042

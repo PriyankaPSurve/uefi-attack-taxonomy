@@ -1,0 +1,67 @@
+id: UEFI-T0016.002
+name: Malicious Boot Loader Injection
+type: sub-technique
+tactic: UEFI-TA9004
+parent: UEFI-T0016
+version_added: "1.0"
+description: >
+  Attackers modify or replace the legitimate bootloader with a malicious one.
+  The bootloader loads the operating system (OS) into memory and initiates
+  system startup. Injecting a malicious bootloader can give attackers control
+  over the boot process
+evidence:
+  - name: UEFI and Dreamboot
+    year: 2013
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+  - name: "UEFI threats moving to the ESP: Introducing ESPecter bootkit"
+    year: 2021
+    references:
+      - https://www.welivesecurity.com/2021/10/05/uefi-threats-moving-esp-introducing-especter-bootkit/
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 3
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 2
+  - id: PM-01-03
+    name: BIOS integrity check
+    applicability: 2
+  - id: PM-01-08
+    name: Boot order verification
+    applicability: 2
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 1
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 2
+risk:
+  impact: 5
+  likelihood: 4
+  effectiveness: 1.92
+  level: Very high

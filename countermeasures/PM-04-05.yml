@@ -1,0 +1,23 @@
+id: PM-04-05
+name: Verify integrity of update tools
+family: PM-04
+family_name: Update Patch Management
+category: Preventive
+version_added: "1.0"
+description: >
+  Verify integrity of update tools. See the referenced guidance for detail.
+references:
+  - https://www.nsa.gov/portals/75/documents/what-we-do/cybersecurity/professional-resources/ctr-uefi-defensive-practices-guidance.pdf
+  - https://uefi.org/sites/default/files/resources/UEFI%20Firmware%20-%20Security%20Concerns%20and%20Best%20Practices.pdf
+addresses:
+  - UEFI-T0002
+  - UEFI-T0004.001
+  - UEFI-T0004.003
+  - UEFI-T0008.001
+  - UEFI-T0008.002
+  - UEFI-T0009.001
+  - UEFI-T0010
+  - UEFI-T0012
+  - UEFI-T0018.002
+  - UEFI-T0025.003
+  - UEFI-T0035

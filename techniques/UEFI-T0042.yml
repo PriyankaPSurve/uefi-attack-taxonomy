@@ -1,0 +1,47 @@
+id: UEFI-T0042
+name: UEFI Logs
+type: technique
+tactic: UEFI-TA9010
+version_added: "1.0"
+description: >
+  Attackers can retrieve measured boot logs (if enabled) or records related
+  to UEFI updates to gather information about previous updates,
+  vulnerabilities, or changes in the firmware
+evidence:
+  - name: BitLocker Countermeasures
+    year: 2023
+    references:
+      - https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/bitlocker-countermeasures#uefi-and-secure-
+  - name: Unified Extensible Firmware Interface (UEFI) Specification Release 2.10
+    year: 2022
+    references:
+      - https://uefi.org/sites/default/files/resources/UEFI_Spec_2_10_Aug29.pdf
+  - name: "Securing UEFI: An Underpinning Technology for Computing"
+    year: 2023
+countermeasures:
+  - id: PM-01-12
+    name: Full-disk encryption
+    applicability: 1
+  - id: PM-01-13
+    name: Disable legacy protocols and services
+    applicability: 1
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 1
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 2
+  effectiveness: 1.00
+  level: Low

@@ -1,0 +1,19 @@
+id: PM-02-02
+name: Use secure, traceable supply chain method
+family: PM-02
+family_name: Supply Chain Security
+category: Preventive
+version_added: "1.0"
+description: >
+  Use secure, traceable supply chain method. See the referenced guidance for
+  detail.
+references:
+  - https://www.blackhat.com/asia-23/briefings/schedule/#the-various-shades-of-supply-chain-sbom-n-days-and-zero-trust-31253
+  - https://uefi.org/sites/default/files/resources/UEFI_VirtualSummit_2022_Tackling_Security_Through_the_Supply_Chain_Draft_Final_v4.pdf
+addresses:
+  - UEFI-T0004.001
+  - UEFI-T0004.002
+  - UEFI-T0004.003
+  - UEFI-T0006
+  - UEFI-T0009.001
+  - UEFI-T0009.002

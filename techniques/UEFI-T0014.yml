@@ -1,0 +1,59 @@
+id: UEFI-T0014
+name: UEFI Shell Exploitation
+type: technique
+tactic: UEFI-TA9004
+version_added: "1.0"
+description: >
+  If the UEFI implementation supports a shell environment, it can be
+  exploited by the attackers to execute arbitrary UEFI shell scripts or
+  commands
+evidence:
+  - name: UEFI Shell Specification
+    year: 2016
+    references:
+      - https://uefi.org/sites/default/files/resources/UEFI_Shell_2_2.pdf
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 1
+  - id: PM-01-08
+    name: Boot order verification
+    applicability: 1
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 2
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 2
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 2
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 2
+  - id: PM-05-02
+    name: Run only signed drivers
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 3
+  effectiveness: 1.54
+  level: Moderate

@@ -1,0 +1,18 @@
+id: PM-01-03
+name: BIOS integrity check
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.0"
+description: >
+  BIOS integrity check. See the referenced guidance for detail.
+references:
+  - https://www.nsa.gov/portals/75/documents/what-we-do/cybersecurity/professional-resources/ctr-uefi-defensive-practices-guidance.pdf
+  - https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-147.pdf
+addresses:
+  - UEFI-T0011
+  - UEFI-T0016.002
+  - UEFI-T0016.004
+  - UEFI-T0018.001
+  - UEFI-T0018.002
+  - UEFI-T0020

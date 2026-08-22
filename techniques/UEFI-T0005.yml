@@ -1,0 +1,61 @@
+id: UEFI-T0005
+name: Acquire Access
+type: technique
+tactic: UEFI-TA9002
+version_added: "1.0"
+description: >
+  The adversary purchases access to the target via access brokers
+evidence:
+  - name: "TRICKBOT NOW OFFERS ‘TRICKBOOT’: PERSIST, BRICK, PROFIT"
+    year: 2020
+    references:
+      - https://eclypsium.com/wp-content/uploads/TrickBot-Now-Offers-TrickBoot-Persist-Brick-Profit.pdf
+  - name: SHADOWHAMMER AND THE FIRMWARE SUPPLY CHAIN
+    year: 2019
+    references:
+      - https://eclypsium.com/wp-content/uploads/ShadowHammer-and-the-Firmware-Supply-Chain.pdf
+countermeasures:
+  - id: PM-01-08
+    name: Boot order verification
+    applicability: 1
+  - id: PM-01-09
+    name: Memory integrity verification
+    applicability: 1
+  - id: PM-01-13
+    name: Disable legacy protocols and services
+    applicability: 2
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 2
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 3
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 3
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 2
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 2
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-03-01
+    name: Revoke compromised credentials
+    applicability: 1
+  - id: RM-01-03
+    name: Restore credentials
+    applicability: 1
+risk:
+  impact: 4
+  likelihood: 2
+  effectiveness: 1.85
+  level: Moderate

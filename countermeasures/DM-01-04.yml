@@ -1,0 +1,14 @@
+id: DM-01-04
+name: Monitor for memory patching attempts
+family: DM-01
+family_name: System Behavior Monitoring
+category: Detective
+version_added: "1.0"
+description: >
+  Monitor for memory patching attempts. See the referenced guidance for
+  detail.
+addresses:
+  - UEFI-T0013
+  - UEFI-T0015
+  - UEFI-T0033
+  - UEFI-T0039

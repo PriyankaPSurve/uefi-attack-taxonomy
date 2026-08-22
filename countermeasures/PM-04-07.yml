@@ -1,0 +1,17 @@
+id: PM-04-07
+name: MFA for update process
+family: PM-04
+family_name: Update Patch Management
+category: Preventive
+version_added: "1.0"
+description: >
+  MFA for update process. See the referenced guidance for detail.
+references:
+  - https://uefi.org/specs/UEFI/2.9_A/36_User_Identification.html
+  - https://www.entitle.io/resources/glossary/multi-factor-authentication-mfa
+addresses:
+  - UEFI-T0007
+  - UEFI-T0008.002
+  - UEFI-T0010
+  - UEFI-T0018.002
+  - UEFI-T0025.003

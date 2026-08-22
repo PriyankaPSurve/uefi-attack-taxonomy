@@ -1,0 +1,15 @@
+id: UEFI-T0008
+name: Develop Capabilities
+type: technique
+tactic: UEFI-TA9002
+version_added: "1.0"
+description: >
+  Attackers develop capabilities, such as exploits, to carry out malicious
+  activities. Those capabilities include the following sub-techniques
+evidence:
+  - name: LoJax UEFI Rootkit Used in Cyberespionage
+    year: 2018
+    references:
+      - https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/lojax-uefi-rootkit-used-in-cyberespionage
+references:
+  - https://unit42.paloaltonetworks.com/glupteba-malware-uefi-bootkit/

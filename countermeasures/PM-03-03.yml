@@ -1,0 +1,43 @@
+id: PM-03-03
+name: Access control to UEFI settings and features
+family: PM-03
+family_name: Authentication, Authorization, Access Control
+category: Preventive
+version_added: "1.0"
+description: >
+  Access control to UEFI settings and features. See the referenced guidance
+  for detail.
+references:
+  - https://www.nsa.gov/portals/75/documents/what-we-do/cybersecurity/professional-resources/ctr-uefi-defensive-practices-guidance.pdf
+  - https://uefi.org/sites/default/files/resources/2014_UEFI_Plugfest_06_Phoenix.pdf
+addresses:
+  - UEFI-T0001
+  - UEFI-T0003
+  - UEFI-T0005
+  - UEFI-T0007
+  - UEFI-T0011
+  - UEFI-T0012
+  - UEFI-T0014
+  - UEFI-T0017
+  - UEFI-T0018.001
+  - UEFI-T0019
+  - UEFI-T0021
+  - UEFI-T0022
+  - UEFI-T0025.001
+  - UEFI-T0025.002
+  - UEFI-T0025.004
+  - UEFI-T0025.005
+  - UEFI-T0026
+  - UEFI-T0027
+  - UEFI-T0028
+  - UEFI-T0029
+  - UEFI-T0030
+  - UEFI-T0031
+  - UEFI-T0032
+  - UEFI-T0034
+  - UEFI-T0036
+  - UEFI-T0037
+  - UEFI-T0038
+  - UEFI-T0040
+  - UEFI-T0041
+  - UEFI-T0042

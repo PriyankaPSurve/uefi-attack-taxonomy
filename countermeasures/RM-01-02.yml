@@ -1,0 +1,21 @@
+id: RM-01-02
+name: Reissue cryptographic keys
+family: RM-01
+family_name: UEFI Restoration
+category: Remediation
+version_added: "1.0"
+description: >
+  Reissue cryptographic keys. See the referenced guidance for detail.
+references:
+  - https://uefi.org/sites/default/files/resources/UEFI%20Key%20Management%20Service%20%28KMS%29%20With%20TPM%C2%A0_Otumfuor%20and%20Polyudov.pdf
+  - https://uefi.org/sites/default/files/resources/UEFI_Secure_Boot_in_Modern_Computer_Security_Solutions_2013.pdf
+addresses:
+  - UEFI-T0008.002
+  - UEFI-T0010
+  - UEFI-T0018.002
+  - UEFI-T0019
+  - UEFI-T0025.001
+  - UEFI-T0025.003
+  - UEFI-T0032
+  - UEFI-T0035
+  - UEFI-T0036

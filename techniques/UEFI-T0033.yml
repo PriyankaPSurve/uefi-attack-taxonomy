@@ -1,0 +1,59 @@
+id: UEFI-T0033
+name: SMM Exploitation
+type: technique
+tactic: UEFI-TA9008
+version_added: "1.0"
+description: >
+  Attackers exploit vulnerabilities in SMM code to gain low-level control of
+  the system, effectively escalating their privileges within the firmware
+evidence:
+  - name: Are you giving firmware attackers a free pass
+    year: 2015
+  - name: Lenovo ThinkPad System Management Mode arbitrary code execution exploit
+    year: 2016
+    references:
+      - https://github.com/Cr4sh/ThinkPwn
+  - name: The design of the simple SMM rootkit
+    year: 2022
+countermeasures:
+  - id: PM-01-05
+    name: Disable unnecessary SMM features
+    applicability: 3
+  - id: PM-01-07
+    name: Memory access control
+    applicability: 2
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 2
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-01
+    name: Monitor SMM access and activities
+    applicability: 3
+  - id: DM-01-03
+    name: Scan for unauthorized memory access patterns
+    applicability: 2
+  - id: DM-01-04
+    name: Monitor for memory patching attempts
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-02-03
+    name: Isolate and disable compromise SMM features
+    applicability: 3
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 2
+risk:
+  impact: 5
+  likelihood: 4
+  effectiveness: 2.17
+  level: High

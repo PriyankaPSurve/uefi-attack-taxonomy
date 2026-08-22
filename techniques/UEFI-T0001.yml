@@ -1,1 +1,59 @@
-
+id: UEFI-T0001
+name: System Enumeration
+type: technique
+tactic: UEFI-TA9001
+version_added: "1.0"
+description: >
+  Attackers aim to identify the target system's UEFI firmware version,
+  vendor, and specific model . This information helps them understand the
+  firmware's features, potential vulnerabilities, and available exploits
+evidence:
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+  - name: TRICKBOOT FEATURE ALLOWS TRICKBOT BOT TO RUN UEFI ATTACKS
+    year: 2020
+    references:
+      - https://securityaffairs.com/111849/malware/trickbot-trickboot-uefi-attacks.html
+  - name: "TrickBot's new 'TrickBoot' module infects your UEFI firmware"
+    year: 2020
+    references:
+      - https://www.bleepingcomputer.com/news/security/trickbots-new-trickboot-module-infects-your-uefi-firmware/
+  - name: SHADOWHAMMER AND THE FIRMWARE SUPPLY CHAIN
+    year: 2019
+    references:
+      - https://eclypsium.com/wp-content/uploads/ShadowHammer-and-the-Firmware-Supply-Chain.pdf
+countermeasures:
+  - id: PM-01-07
+    name: Memory access control
+    applicability: 1
+  - id: PM-01-08
+    name: Boot order verification
+    applicability: 1
+  - id: PM-01-09
+    name: Memory integrity verification
+    applicability: 1
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+risk:
+  impact: 3
+  likelihood: 4
+  effectiveness: 1.56
+  level: High

@@ -1,0 +1,12 @@
+id: DM-01-05
+name: Monitor DMA access
+family: DM-01
+family_name: System Behavior Monitoring
+category: Detective
+version_added: "1.0"
+description: >
+  Monitor DMA access. See the referenced guidance for detail.
+references:
+  - https://eclypsium.com/research/direct-memory-access-attacks-a-walk-down-memory-lane/
+addresses:
+  - UEFI-T0015

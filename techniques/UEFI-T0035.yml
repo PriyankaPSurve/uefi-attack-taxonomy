@@ -1,0 +1,65 @@
+id: UEFI-T0035
+name: Leaked Authentic Digital Certificates
+type: technique
+tactic: UEFI-TA9009
+version_added: "1.0"
+description: >
+  Leaked digital certificates, particularly those used for code signing or
+  secure communication, can be exploited by attackers. If attackers gain
+  access to these certificates, they can sign malicious firmware or
+  bootloader components, making them appear legitimate during the Secure Boot
+  verification process
+evidence:
+  - name: "UPDATE: Operation ShadowHammer – Compromised ASUS Computers"
+    year: 2019
+    references:
+      - https://cert.europa.eu/publications/security-advisories/2019-007/
+  - name: SHADOWHAMMER AND THE FIRMWARE SUPPLY CHAIN
+    year: 2019
+    references:
+      - https://eclypsium.com/wp-content/uploads/ShadowHammer-and-the-Firmware-Supply-Chain.pdf
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 1
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 1
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 3
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 1
+  - id: PM-04-05
+    name: Verify integrity of update tools
+    applicability: 1
+  - id: PM-04-06
+    name: Check signature before applying UEFI update
+    applicability: 2
+  - id: PM-05-02
+    name: Run only signed drivers
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 3
+  - id: RM-01-02
+    name: Reissue cryptographic keys
+    applicability: 3
+risk:
+  impact: 4
+  likelihood: 2
+  effectiveness: 1.54
+  level: Moderate

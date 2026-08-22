@@ -1,0 +1,20 @@
+id: UEFI-T0025
+name: Subvert UEFI Security Controls
+type: technique
+tactic: UEFI-TA9006
+version_added: "1.0"
+description: >
+  UEFI firmware includes various security mechanisms designed to protect the
+  system against unauthorized access, malware, and other threats. The
+  attackers exploit vulnerabilities to bypass or undermine the security
+  features such as secure boot, capsule update, and code-signing certificate
+  using the following techniques
+evidence:
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+  - name: "FinSpy: unseen findings"
+    year: 2021
+    references:
+      - https://securelist.com/finspy-unseen-findings/104322/

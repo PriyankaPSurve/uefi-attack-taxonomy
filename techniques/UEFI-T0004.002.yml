@@ -1,0 +1,42 @@
+id: UEFI-T0004.002
+name: Distribution Chain
+type: sub-technique
+tactic: UEFI-TA9001
+parent: UEFI-T0004
+version_added: "1.0"
+description: >
+  Analyze the security measures deployed by vendors during manufacturing,
+  development, transportation, storage, and installation of the UEFI
+evidence:
+  - name: "Operation ShadowHammer: new supply chain attack threatens hundreds of thousands of users worldwide"
+    year: 2019
+    references:
+      - https://www.kaspersky.com/about/press-releases/2019_operation-shadowhammer-new-supply-chain-attack
+  - name: "Operation ShadowHammer: a high-profile supply chain attack"
+    year: 2019
+    references:
+      - https://securelist.com/operation-shadowhammer-a-high-profile-supply-chain-attack/90380/
+countermeasures:
+  - id: PM-02-01
+    name: Assess and audit vendors in the UEFI supply chain
+    applicability: 2
+  - id: PM-02-02
+    name: Use secure, traceable supply chain method
+    applicability: 3
+  - id: PM-02-03
+    name: Use components from trusted sources only
+    applicability: 2
+  - id: PM-02-04
+    name: 3rd party component integrity check
+    applicability: 2
+  - id: PM-02-05
+    name: Incorporate SBOM into SSDLC
+    applicability: 2
+  - id: MM-01-03
+    name: Analyze supply chain impact
+    applicability: 2
+risk:
+  impact: 3
+  likelihood: 3
+  effectiveness: 2.17
+  level: Low

@@ -1,0 +1,48 @@
+id: UEFI-T0041
+name: Network Configuration and Credentials
+type: technique
+tactic: UEFI-TA9010
+version_added: "1.0"
+description: >
+  UEFI firmware stores network-related configurations and credentials for
+  services like PXE (Preboot Execution Environment) boot or remote
+  management. Attackers extract these credentials for unauthorized network
+  access
+evidence:
+  - name: Unified Extensible Firmware Interface (UEFI) Specification Release 2.10
+    year: 2022
+    references:
+      - https://uefi.org/sites/default/files/resources/UEFI_Spec_2_10_Aug29.pdf
+countermeasures:
+  - id: PM-01-12
+    name: Full-disk encryption
+    applicability: 1
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 1
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 2
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 2
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-03-01
+    name: Revoke compromised credentials
+    applicability: 2
+  - id: RM-01-03
+    name: Restore credentials
+    applicability: 1
+risk:
+  impact: 2
+  likelihood: 5
+  effectiveness: 1.56
+  level: Moderate

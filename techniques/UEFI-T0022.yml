@@ -1,0 +1,70 @@
+id: UEFI-T0022
+name: Hooking UEFI Services
+type: technique
+tactic: UEFI-TA9005
+version_added: "1.0"
+description: >
+  UEFI runtime services provide various functions accessible even after the
+  operating system has been booted. Attackers modify or "hook" these services
+  by injecting malicious code or modifying existing service handlers.
+  Handlers such as GetVariable and SetVariable are targeted to manipulate
+  UEFI variables related to boot order, firmware settings, or security
+  policies . LocateProtocol and LocateHandle are used to access specific
+  firmware interfaces or to locate functions or resources.
+  InstallProtocolInterface is exploited to introduce malicious code into
+  protocols or interfaces. AllocatePages and FreePages allocate memory for
+  code or data structures, ensuring persistence, while RaiseTPL is used to
+  gain higher privileges by raising the Task Priority Level
+evidence:
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+  - name: "CosmicStrand: the discovery of a sophisticated UEFI firmware rootkit"
+    year: 2022
+    references:
+      - https://securelist.com/cosmicstrand-uefi-firmware-rootkit/106973/
+  - name: Malware delivery through UEFI bootkit with MosaicRegressor
+    year: 2020
+    references:
+      - https://www.kaspersky.com/blog/mosaicregressor-uefi-malware/37252/
+  - name: "Meet ESPecter: a new UEFI bootkit for cyber spying"
+    year: 2021
+    references:
+      - https://www.zdnet.com/article/meet-especter-a-new-uefi-bootkit-for-cyber-spying/
+countermeasures:
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 3
+  effectiveness: 1.50
+  level: Moderate

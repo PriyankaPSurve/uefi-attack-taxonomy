@@ -1,0 +1,25 @@
+id: MM-03-02
+name: Revoke compromised cryptographic keys
+family: MM-03
+family_name: Credential Management
+category: Mitigation
+version_added: "1.0"
+description: >
+  Revoke compromised cryptographic keys. See the referenced guidance for
+  detail.
+references:
+  - https://uefi.org/sites/default/files/resources/UEFI%20Key%20Management%20Service%20%28KMS%29%20With%20TPM%C2%A0_Otumfuor%20and%20Polyudov.pdf
+  - https://uefi.org/sites/default/files/resources/UEFI_Secure_Boot_in_Modern_Computer_Security_Solutions_2013.pdf
+  - https://support.microsoft.com/en-us/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d
+addresses:
+  - UEFI-T0007
+  - UEFI-T0008.002
+  - UEFI-T0010
+  - UEFI-T0018.002
+  - UEFI-T0019
+  - UEFI-T0025.001
+  - UEFI-T0025.003
+  - UEFI-T0025.005
+  - UEFI-T0032
+  - UEFI-T0035
+  - UEFI-T0036

@@ -1,0 +1,10 @@
+id: PM-01-05
+name: Disable unnecessary SMM features
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.0"
+description: >
+  Disable unnecessary SMM features. See the referenced guidance for detail.
+addresses:
+  - UEFI-T0033

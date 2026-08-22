@@ -1,0 +1,49 @@
+id: UEFI-T0008.001
+name: Exploit Development
+type: sub-technique
+tactic: UEFI-TA9002
+parent: UEFI-T0008
+version_added: "1.0"
+description: >
+  Attackers create or obtain exploit code to target specific UEFI
+  vulnerabilities, such as customizing a UEFI DXE driver
+evidence:
+  - name: LoJax UEFI Rootkit Used in Cyberespionage
+    year: 2018
+    references:
+      - https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/lojax-uefi-rootkit-used-in-cyberespionage
+references:
+  - https://unit42.paloaltonetworks.com/glupteba-malware-uefi-bootkit/
+countermeasures:
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-04-05
+    name: Verify integrity of update tools
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+  - id: MM-01-03
+    name: Analyze supply chain impact
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 3
+  effectiveness: 1.22
+  level: Moderate

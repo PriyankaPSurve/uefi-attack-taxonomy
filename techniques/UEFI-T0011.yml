@@ -1,0 +1,82 @@
+id: UEFI-T0011
+name: Physical Attacks
+type: technique
+tactic: UEFI-TA9003
+version_added: "1.0"
+description: >
+  Attackers gain unauthorized physical access to the target system to modify
+  the UEFI firmware by tampering with the SPI flash chip or other storage
+  devices where the firmware is stored. Such an attack can typically be
+  carried out by an insider threat
+evidence:
+  - name: WikiLeaks Releases Data on CIA’s Apple Hacking Tools
+    year: 2017
+    references:
+      - https://www.securityweek.com/wikileaks-releases-data-cias-apple-hacking-tools/
+  - name: "Thunderstrike: EFI firmware bootkits for Apple MacBooks"
+    year: 2015
+  - name: Thunderstrike
+    year: 2014
+    references:
+      - https://trmm.net/Thunderstrike/
+  - name: Detecting UEFI Bootkits in the Wild (Part 1)
+    year: 2021
+    references:
+      - https://blogs.vmware.com/security/2021/06/detecting-uefi-bootkits-in-the-wild-part-1.html
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 2
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 2
+  - id: PM-01-03
+    name: BIOS integrity check
+    applicability: 2
+  - id: PM-01-04
+    name: Set flash descriptor region to Read-Only
+    applicability: 2
+  - id: PM-01-07
+    name: Memory access control
+    applicability: 1
+  - id: PM-01-08
+    name: Boot order verification
+    applicability: 2
+  - id: PM-01-11
+    name: Lock down SPI flash memory access
+    applicability: 2
+  - id: PM-01-12
+    name: Full-disk encryption
+    applicability: 2
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 2
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 3
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 3
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-02-01
+    name: Isolate the affected system
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 2
+  - id: RM-01-03
+    name: Restore credentials
+    applicability: 1
+risk:
+  impact: 5
+  likelihood: 4
+  effectiveness: 2.00
+  level: High

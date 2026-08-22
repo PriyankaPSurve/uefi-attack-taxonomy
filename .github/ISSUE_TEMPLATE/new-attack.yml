@@ -1,0 +1,74 @@
+name: Report a new attack or vulnerability
+description: Add a documented UEFI attack, proof of concept, or vulnerability to the evidence base
+title: "[Attack] "
+labels: ["evidence", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing. This form is for adding evidence to techniques that
+        already exist. If you believe the attack fits no existing technique, please
+        use the "Propose a new technique" form instead.
+
+  - type: input
+    id: name
+    attributes:
+      label: Attack or vulnerability name
+      placeholder: "LogoFAIL, CVE-2025-4275, PKfail"
+    validations:
+      required: true
+
+  - type: input
+    id: year
+    attributes:
+      label: Year first publicly disclosed
+      placeholder: "2026"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - Observed in the wild
+        - Proof of concept
+        - Disclosed vulnerability, no known exploitation
+    validations:
+      required: true
+
+  - type: textarea
+    id: reference
+    attributes:
+      label: Public reference(s)
+      description: Vendor advisory, research write-up, CVE record. One per line.
+      placeholder: |
+        https://www.example.com/research/writeup
+        https://nvd.nist.gov/vuln/detail/CVE-XXXX-XXXXX
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What does it do?
+      description: Two or three sentences. What is attacked, and what does the attacker gain?
+    validations:
+      required: true
+
+  - type: input
+    id: techniques
+    attributes:
+      label: Which technique(s) does this map to?
+      description: Technique identifiers, comma separated. Leave blank if unsure and we will work it out.
+      placeholder: "UEFI-T0025.005, UEFI-T0020"
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: This is publicly documented, not embargoed or private
+          required: true
+        - label: I have checked it is not already recorded in the framework
+          required: true

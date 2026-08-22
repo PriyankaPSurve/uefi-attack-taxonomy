@@ -1,0 +1,59 @@
+id: UEFI-T0013
+name: Overflow Vulnerability
+type: technique
+tactic: UEFI-TA9004
+version_added: "1.0"
+description: >
+  Vulnerabilities can occur when inputs to UEFI system components are not
+  properly validated, or when buffer limits are not enforced, causing data to
+  overflow into adjacent memory regions. Attackers gain unauthorized access
+  to such memory regions and misuse the sensitive information gathered from
+  those regions
+evidence:
+  - name: "THERE'S A HOLE IN THE BOOT"
+    year: 2020
+    references:
+      - https://eclypsium.com/blog/theres-a-hole-in-the-boot/
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+countermeasures:
+  - id: PM-01-07
+    name: Memory access control
+    applicability: 2
+  - id: PM-01-09
+    name: Memory integrity verification
+    applicability: 2
+  - id: PM-01-14
+    name: Validate and restrict parsing of boot resources
+    applicability: 2
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 3
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 3
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-03
+    name: Scan for unauthorized memory access patterns
+    applicability: 2
+  - id: DM-01-04
+    name: Monitor for memory patching attempts
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 3
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+risk:
+  impact: 4
+  likelihood: 3
+  effectiveness: 2.00
+  level: Moderate

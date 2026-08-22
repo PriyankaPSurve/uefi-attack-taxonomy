@@ -1,0 +1,9 @@
+id: UEFI-TA9006
+name: Defense Evasion
+version_added: "1.0"
+description: >
+  The adversary subverts, bypasses or conceals activity from the security controls
+  provided by platform firmware, so that malicious code executes or persists without
+  being prevented or detected.
+attack_mapping:
+  - TA0005

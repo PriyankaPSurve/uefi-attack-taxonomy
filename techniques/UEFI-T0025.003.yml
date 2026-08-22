@@ -1,0 +1,68 @@
+id: UEFI-T0025.003
+name: Code Signing Certificate Abuse
+type: sub-technique
+tactic: UEFI-TA9006
+parent: UEFI-T0025
+version_added: "1.0"
+description: >
+  Code signing verifies the authenticity and integrity of software by
+  attaching a digital signature. With a stolen or fraudulent code signing
+  certificate, attackers can sign malicious UEFI firmware, drivers, or other
+  components that are executed during the boot process or firmware update and
+  are considered legitimate due to their valid digital signatures
+evidence:
+  - name: "UPDATE: Operation ShadowHammer – Compromised ASUS Computers"
+    year: 2019
+    references:
+      - https://cert.europa.eu/publications/security-advisories/2019-007/
+countermeasures:
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 2
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 3
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 1
+  - id: PM-04-05
+    name: Verify integrity of update tools
+    applicability: 1
+  - id: PM-04-06
+    name: Check signature before applying UEFI update
+    applicability: 2
+  - id: PM-04-07
+    name: MFA for update process
+    applicability: 1
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 1
+  - id: PM-05-02
+    name: Run only signed drivers
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 2
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 3
+  - id: RM-01-02
+    name: Reissue cryptographic keys
+    applicability: 3
+risk:
+  impact: 4
+  likelihood: 2
+  effectiveness: 1.67
+  level: Moderate

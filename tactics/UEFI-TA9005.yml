@@ -1,0 +1,7 @@
+id: UEFI-TA9005
+name: Persistence
+version_added: "1.0"
+description: >
+  These techniques ensure that the threat actor maintains control of the
+  infected system, even after a reboot. A threat actor accomplishes
+  persistence in several ways

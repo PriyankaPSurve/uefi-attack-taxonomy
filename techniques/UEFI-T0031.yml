@@ -1,0 +1,49 @@
+id: UEFI-T0031
+name: UEFI Services Exploitation
+type: technique
+tactic: UEFI-TA9008
+version_added: "1.0"
+description: >
+  Manipulating UEFI services, such as UEFI variable services, UEFI handles,
+  and task-level priority, allows attackers to gain unauthorized control over
+  the boot process and system configuration. At this elevated access level,
+  attackers can execute their code without any restrictions
+evidence:
+  - name: Extreme privilege escalation on Windows 8/UEFI systems
+    year: 2014
+countermeasures:
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+risk:
+  impact: 4
+  likelihood: 3
+  effectiveness: 1.50
+  level: High

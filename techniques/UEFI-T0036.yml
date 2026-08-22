@@ -1,0 +1,50 @@
+id: UEFI-T0036
+name: Digital Certificate and Key Extraction
+type: technique
+tactic: UEFI-TA9009
+version_added: "1.0"
+description: >
+  If digital certificates or encryption keys are stored in UEFI firmware for
+  secure communication or firmware updates, attackers attempt to extract
+  these credentials for later use
+evidence:
+  - name: SHADOWHAMMER AND THE FIRMWARE SUPPLY CHAIN
+    year: 2019
+    references:
+      - https://eclypsium.com/wp-content/uploads/ShadowHammer-and-the-Firmware-Supply-Chain.pdf
+countermeasures:
+  - id: PM-01-06
+    name: Encrypt sensitive memory areas
+    applicability: 1
+  - id: PM-01-12
+    name: Full-disk encryption
+    applicability: 1
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 3
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 1
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 2
+  - id: RM-01-02
+    name: Reissue cryptographic keys
+    applicability: 2
+risk:
+  impact: 3
+  likelihood: 2
+  effectiveness: 1.40
+  level: Low

@@ -1,0 +1,36 @@
+id: UEFI-T0037
+name: UEFI Variable Enumeration
+type: technique
+tactic: UEFI-TA9010
+version_added: "1.0"
+description: >
+  Attackers enumerate UEFI variables to gather information about system
+  settings, configurations, or stored data
+evidence:
+  - name: "Securing UEFI: An Underpinning Technology for Computing"
+    year: 2023
+  - name: Unified Extensible Firmware Interface (UEFI) Specification Release 2.10
+    year: 2022
+    references:
+      - https://uefi.org/sites/default/files/resources/UEFI_Spec_2_10_Aug29.pdf
+countermeasures:
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+risk:
+  impact: 2
+  likelihood: 2
+  effectiveness: 1.00
+  level: Low

@@ -1,0 +1,17 @@
+id: DM-01-03
+name: Scan for unauthorized memory access patterns
+family: DM-01
+family_name: System Behavior Monitoring
+category: Detective
+version_added: "1.0"
+description: >
+  Scan for unauthorized memory access patterns. See the referenced guidance
+  for detail.
+references:
+  - https://uefi.org/sites/default/files/resources/Hardening%20the%20Core%20Enhanced%20Memory%20Protection_Beebe.pdf
+addresses:
+  - UEFI-T0013
+  - UEFI-T0015
+  - UEFI-T0016.004
+  - UEFI-T0033
+  - UEFI-T0039

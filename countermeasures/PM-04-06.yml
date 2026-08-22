@@ -1,0 +1,20 @@
+id: PM-04-06
+name: Check signature before applying UEFI update
+family: PM-04
+family_name: Update Patch Management
+category: Preventive
+version_added: "1.0"
+description: >
+  Check signature before applying UEFI update. See the referenced guidance
+  for detail.
+references:
+  - https://www.nsa.gov/portals/75/documents/what-we-do/cybersecurity/professional-resources/ctr-uefi-defensive-practices-guidance.pdf
+  - https://media.defense.gov/2023/Mar/20/2003182401/-1/-1/0/CTR-UEFI-SECURE-BOOT-CUSTOMIZATION-20230317.PDFnote
+addresses:
+  - UEFI-T0008.002
+  - UEFI-T0010
+  - UEFI-T0018.002
+  - UEFI-T0025.001
+  - UEFI-T0025.003
+  - UEFI-T0032
+  - UEFI-T0035

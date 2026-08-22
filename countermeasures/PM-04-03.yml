@@ -1,0 +1,16 @@
+id: PM-04-03
+name: Implement UEFI Version Control
+family: PM-04
+family_name: Update Patch Management
+category: Preventive
+version_added: "1.0"
+description: >
+  Implement UEFI Version Control. See the referenced guidance for detail.
+references:
+  - https://uefi.org/sites/default/files/resources/Vulnerability%20Management%20in%20UEFI_Mullen.pdf
+  - https://www.spiceworks.com/tech/devops/articles/what-is-version-control/
+addresses:
+  - UEFI-T0002
+  - UEFI-T0009.001
+  - UEFI-T0010
+  - UEFI-T0018.002

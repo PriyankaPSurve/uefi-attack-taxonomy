@@ -1,0 +1,15 @@
+id: PM-01-11
+name: Lock down SPI flash memory access
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.0"
+description: >
+  Lock down SPI flash memory access. See the referenced guidance for detail.
+references:
+  - https://eclypsium.com/research/firmware-security-realizations-part-3-spi-write-protections/
+addresses:
+  - UEFI-T0011
+  - UEFI-T0016.004
+  - UEFI-T0018.001
+  - UEFI-T0040

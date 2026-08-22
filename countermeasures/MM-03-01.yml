@@ -1,0 +1,21 @@
+id: MM-03-01
+name: Revoke compromised credentials
+family: MM-03
+family_name: Credential Management
+category: Mitigation
+version_added: "1.0"
+description: >
+  Revoke compromised credentials. See the referenced guidance for detail.
+references:
+  - https://www.cisa.gov/news-events/news/call-action-bolster-uefi-cybersecurity-now
+  - https://eclypsium.com/blog/sunburst-firmware-supply-chain-attack-ir/
+  - https://support.microsoft.com/en-us/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d
+addresses:
+  - UEFI-T0005
+  - UEFI-T0007
+  - UEFI-T0010
+  - UEFI-T0018.002
+  - UEFI-T0025.002
+  - UEFI-T0025.004
+  - UEFI-T0034
+  - UEFI-T0041

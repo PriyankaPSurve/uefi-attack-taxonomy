@@ -1,0 +1,68 @@
+id: UEFI-T0016.001
+name: Malicious Driver Injection
+type: sub-technique
+tactic: UEFI-TA9004
+parent: UEFI-T0016
+version_added: "1.0"
+description: >
+  Attackers can inject and execute a malicious driver during the DXE phase of
+  booting. This allows attackers to gain control over the system very early,
+  potentially compromising UEFI security and integrity
+evidence:
+  - name: PEI stage backdoor for UEFI compatible firmware
+    year: 2022
+    references:
+      - https://github.com/Cr4sh/PeiBackdoor
+  - name: LoJax UEFI Rootkit Used in Cyberespionage
+    year: 2018
+    references:
+      - https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/lojax-uefi-rootkit-used-in-cyberespionage
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 2
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 2
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 1
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 3
+  - id: PM-05-02
+    name: Run only signed drivers
+    applicability: 3
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-01-02
+    name: Monitor system during loading of a driver
+    applicability: 3
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 2
+risk:
+  impact: 5
+  likelihood: 4
+  effectiveness: 2.08
+  level: High

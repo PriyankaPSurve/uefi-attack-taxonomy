@@ -1,0 +1,61 @@
+id: UEFI-T0025.005
+name: Vulnerable Signed Binary Abuse
+type: sub-technique
+tactic: UEFI-TA9006
+parent: UEFI-T0025
+version_added: "1.1"
+description: >
+  An adversary obtains execution of unsigned code under an enabled Secure Boot
+  configuration by invoking a UEFI application that is already signed by a trusted
+  authority and that contains a defect permitting it to load or write
+  attacker-controlled content. The technique requires neither a compromised signing
+  key nor a leaked certificate, and is therefore distinct from Code Signing
+  Certificate Abuse (UEFI-T0025.003) and from Leaked Authentic Digital Certificates
+  (UEFI-T0035), both of which presuppose control of key material. Because the
+  vulnerable binary is portable, exploitation is not confined to systems on which the
+  affected product is installed: an adversary may supply their own copy to any
+  platform whose signature database trusts the issuing authority. Mitigation depends
+  on revocation, which introduces a lag between disclosure and effective remediation
+  that the technique exploits.
+evidence:
+  - name: CVE-2024-7344
+    year: 2025
+    type: proof of concept
+    summary: >
+      A Microsoft-signed loader executed an embedded image from a file on the EFI
+      System Partition without integrity verification.
+    references:
+      - https://www.welivesecurity.com/en/eset-research/under-cloak-uefi-secure-boot-introducing-cve-2024-7344/
+  - name: CVE-2025-3052
+    year: 2025
+    type: disclosed vulnerability
+    summary: >
+      A signed flash utility permitted an unvalidated write that disabled the
+      firmware's own signature enforcement.
+    references:
+      - https://www.binarly.io/blog/repeatable-supply-chain-security-failures-in-firmware-key-management
+  - name: Legacy UEFI shims (CVE-2026-8863, CVE-2026-10797)
+    year: 2026
+    type: disclosed vulnerability
+    summary: >
+      Superseded Microsoft-signed Linux shim binaries remained trusted and could be
+      supplied by an attacker to any platform trusting the third-party authority.
+    references:
+      - https://www.welivesecurity.com/en/eset-research/forgotten-uefi-shims-undermining-secure-boot/
+attack_mapping:
+  - T1542.003
+countermeasures:
+  - id: PM-01-11
+    name: Regularly update DBX database
+    applicability: 3
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 2
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 2
+risk:
+  impact: 4
+  likelihood: 4
+  effectiveness: 1.47
+  level: Very high

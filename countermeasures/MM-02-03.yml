@@ -1,0 +1,11 @@
+id: MM-02-03
+name: Isolate and disable compromise SMM features
+family: MM-02
+family_name: Isolation
+category: Mitigation
+version_added: "1.0"
+description: >
+  Isolate and disable compromise SMM features. See the referenced guidance
+  for detail.
+addresses:
+  - UEFI-T0033

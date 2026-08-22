@@ -1,0 +1,50 @@
+id: PM-05-03
+name: Firmware integrity
+family: PM-05
+family_name: Execution Control
+category: Preventive
+version_added: "1.0"
+description: >
+  Firmware integrity. See the referenced guidance for detail.
+references:
+  - https://uefi.org/sites/default/files/resources/Intel_Attacking%20and%20Defending%20the%20Platform.pdf
+  - https://uefi.org/sites/default/files/resources/UEFI%20Key%20Management%20Service%20%28KMS%29%20With%20TPM%C2%A0_Otumfuor%20and%20Polyudov.pdf
+  - https://www.nsa.gov/portals/75/documents/what-we-do/cybersecurity/professional-resources/ctr-uefi-defensive-practices-guidance.pdf
+  - https://uefi.org/sites/default/files/resources/UEFI%20March%20Webinar%20Secure%20Coding%20for%20UEFI%20Firmware.pdf
+addresses:
+  - UEFI-T0001
+  - UEFI-T0002
+  - UEFI-T0003
+  - UEFI-T0008.001
+  - UEFI-T0008.002
+  - UEFI-T0009.001
+  - UEFI-T0010
+  - UEFI-T0011
+  - UEFI-T0012
+  - UEFI-T0013
+  - UEFI-T0014
+  - UEFI-T0016.001
+  - UEFI-T0016.002
+  - UEFI-T0016.003
+  - UEFI-T0016.004
+  - UEFI-T0017
+  - UEFI-T0018.002
+  - UEFI-T0019
+  - UEFI-T0020
+  - UEFI-T0021
+  - UEFI-T0022
+  - UEFI-T0024
+  - UEFI-T0025.001
+  - UEFI-T0025.002
+  - UEFI-T0025.003
+  - UEFI-T0025.004
+  - UEFI-T0025.005
+  - UEFI-T0026
+  - UEFI-T0027
+  - UEFI-T0029
+  - UEFI-T0030
+  - UEFI-T0031
+  - UEFI-T0032
+  - UEFI-T0033
+  - UEFI-T0035
+  - UEFI-T0040

@@ -1,0 +1,14 @@
+id: PM-01-10
+name: Regularly update DBX database
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.0"
+description: >
+  Regularly update DBX database. See the referenced guidance for detail.
+references:
+  - https://support.microsoft.com/en-us/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d
+addresses:
+  - UEFI-T0025.001
+  - UEFI-T0025.005
+  - UEFI-T0032

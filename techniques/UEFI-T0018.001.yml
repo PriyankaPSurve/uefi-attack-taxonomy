@@ -1,0 +1,71 @@
+id: UEFI-T0018.001
+name: Direct Flashing
+type: sub-technique
+tactic: UEFI-TA9004
+parent: UEFI-T0018
+version_added: "1.0"
+description: >
+  Attackers replace the firmware with a trojanized version by writing the
+  malicious firmware directly to the SPI chip, typically using specialized
+  software or tools provided by the hardware manufacturer
+evidence:
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+  - name: "YET ANOTHER UEFI BOOTKIT DISCOVERED: MEET COSMICSTRAND"
+    year: 2022
+    references:
+      - https://eclypsium.com/blog/yet-another-uefi-bootkit-discovered-meet-cosmicstrand/
+  - name: Detecting UEFI Bootkits in the Wild (Part 1)
+    year: 2021
+    references:
+      - https://blogs.vmware.com/security/2021/06/detecting-uefi-bootkits-in-the-wild-part-1.html
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 1
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 3
+  - id: PM-01-03
+    name: BIOS integrity check
+    applicability: 3
+  - id: PM-01-04
+    name: Set flash descriptor region to Read-Only
+    applicability: 3
+  - id: PM-01-11
+    name: Lock down SPI flash memory access
+    applicability: 3
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 2
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 2
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 2
+  - id: DM-01-01
+    name: Monitor SMM access and activities
+    applicability: 3
+  - id: DM-01-06
+    name: Monitor unexpected Write operations to the flash descriptor
+    applicability: 3
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 3
+risk:
+  impact: 5
+  likelihood: 3
+  effectiveness: 2.43
+  level: Moderate

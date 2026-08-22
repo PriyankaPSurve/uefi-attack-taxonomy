@@ -1,0 +1,40 @@
+id: UEFI-T0027
+name: System Architecture Mapping
+type: technique
+tactic: UEFI-TA9007
+version_added: "1.0"
+description: >
+  Attackers aim to identify the architecture and components of the target
+  system, including the motherboard, chipset, processors, memory modules,
+  storage devices, and network interfaces. This information helps them
+  understand the system's capabilities, potential attack vectors, and areas
+  of focus for post-exploitation
+evidence:
+  - name: "TrickBot's new 'TrickBoot' module infects your UEFI firmware"
+    year: 2020
+    references:
+      - https://www.bleepingcomputer.com/news/security/trickbots-new-trickboot-module-infects-your-uefi-firmware/
+countermeasures:
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+risk:
+  impact: 3
+  likelihood: 3
+  effectiveness: 1.50
+  level: Moderate

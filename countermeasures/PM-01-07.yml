@@ -1,0 +1,18 @@
+id: PM-01-07
+name: Memory access control
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.0"
+description: >
+  Memory access control. See the referenced guidance for detail.
+references:
+  - https://uefi.org/sites/default/files/resources/Hardening%20the%20Core%20Enhanced%20Memory%20Protection_Beebe.pdf
+addresses:
+  - UEFI-T0001
+  - UEFI-T0011
+  - UEFI-T0013
+  - UEFI-T0015
+  - UEFI-T0016.004
+  - UEFI-T0033
+  - UEFI-T0039

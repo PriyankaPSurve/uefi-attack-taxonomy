@@ -1,0 +1,55 @@
+id: UEFI-T0017
+name: Exploit UEFI Services
+type: technique
+tactic: UEFI-TA9004
+version_added: "1.0"
+description: >
+  Threat actors exploit various UEFI services to carry out attacks, such as
+  EFI_ BOOT_SERVICES to exploit various boot-related functions (e.g., loading
+  bootloaders and operating systems), EFI_VARIABLE_SERVICES to modify UEFI
+  variables (potentially altering system behavior or disabling security
+  features), EFI_FILE_SERVICES to manipulate or replace critical UEFI
+  firmware files, EFI_TEXT_INPUT_PROTOCOL to inject malicious commands or
+  bypass security measures, and EFI_NETWORK_INTERFACE_IDENTIFIER_PROTOCOL to
+  launch remote UEFI attacks, such as firmware updates over the network
+evidence:
+  - name: Unified Extensible Firmware Interface (UEFI) Specification Release 2.10
+    year: 2022
+    references:
+      - https://uefi.org/sites/default/files/resources/UEFI_Spec_2_10_Aug29.pdf
+countermeasures:
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+risk:
+  impact: 5
+  likelihood: 3
+  effectiveness: 1.50
+  level: High

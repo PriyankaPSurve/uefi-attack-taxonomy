@@ -1,0 +1,5 @@
+id: UEFI-TA9009
+name: Credential Access
+version_added: "1.0"
+description: >
+  Adversary objectives grouped under Credential Access.

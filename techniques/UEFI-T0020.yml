@@ -1,0 +1,82 @@
+id: UEFI-T0020
+name: Bootkit Installation
+type: technique
+tactic: UEFI-TA9005
+version_added: "1.0"
+description: >
+  Establish persistence on a compromised system by embedding malicious code
+  within the boot process, ensuring it executes each time the system starts
+  up
+evidence:
+  - name: Detecting UEFI Bootkits in the Wild (Part 1)
+    year: 2021
+    references:
+      - https://blogs.vmware.com/security/2021/06/detecting-uefi-bootkits-in-the-wild-part-1.html
+  - name: "LoJax: First UEFI rootkit found in the wild, courtesy of the Sednit group"
+    year: 2018
+    references:
+      - https://www.welivesecurity.com/2018/09/27/lojax-first-uefi-rootkit-found-wild-courtesy-sednit-group/
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+  - name: "YET ANOTHER UEFI BOOTKIT DISCOVERED: MEET COSMICSTRAND"
+    year: 2022
+    references:
+      - https://eclypsium.com/blog/yet-another-uefi-bootkit-discovered-meet-cosmicstrand/
+  - name: "Meet ESPecter: a new UEFI bootkit for cyber spying"
+    year: 2021
+    references:
+      - https://www.zdnet.com/article/meet-especter-a-new-uefi-bootkit-for-cyber-spying/
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 3
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 2
+  - id: PM-01-03
+    name: BIOS integrity check
+    applicability: 2
+  - id: PM-01-08
+    name: Boot order verification
+    applicability: 1
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 1
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 1
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 2
+  - id: PM-05-02
+    name: Run only signed drivers
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 2
+risk:
+  impact: 4
+  likelihood: 4
+  effectiveness: 1.79
+  level: Very high

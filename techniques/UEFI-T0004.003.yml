@@ -1,0 +1,52 @@
+id: UEFI-T0004.003
+name: Third-Party Dependency
+type: sub-technique
+tactic: UEFI-TA9001
+parent: UEFI-T0004
+version_added: "1.0"
+description: >
+  Analyze the dependencies and third-party hardware/software used in the
+  system to identify vulnerabilities in those components that can be
+  exploited to compromise the integrity of the UEFI
+evidence:
+  - name: SHADOWHAMMER AND THE FIRMWARE SUPPLY CHAIN
+    year: 2019
+    references:
+      - https://eclypsium.com/wp-content/uploads/ShadowHammer-and-the-Firmware-Supply-Chain.pdf
+  - name: "The Various Shades of Supply Chain: SBOM, N-Days and Zero Trust"
+    year: 2023
+    references:
+      - https://www.blackhat.com/asia-23/briefings/schedule/#the-various-shades-of-supply-chain-sbom-n-days-and-zero-trust-31253
+countermeasures:
+  - id: PM-02-01
+    name: Assess and audit vendors in the UEFI supply chain
+    applicability: 2
+  - id: PM-02-02
+    name: Use secure, traceable supply chain method
+    applicability: 1
+  - id: PM-02-03
+    name: Use components from trusted sources only
+    applicability: 2
+  - id: PM-02-04
+    name: 3rd party component integrity check
+    applicability: 3
+  - id: PM-02-05
+    name: Incorporate SBOM into SSDLC
+    applicability: 2
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 1
+  - id: PM-04-05
+    name: Verify integrity of update tools
+    applicability: 1
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 1
+  - id: MM-01-03
+    name: Analyze supply chain impact
+    applicability: 2
+risk:
+  impact: 3
+  likelihood: 3
+  effectiveness: 1.67
+  level: Moderate

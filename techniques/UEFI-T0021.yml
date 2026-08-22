@@ -1,0 +1,63 @@
+id: UEFI-T0021
+name: UEFI Variable Tampering
+type: technique
+tactic: UEFI-TA9005
+version_added: "1.0"
+description: >
+  UEFI variable tampering ensures that the attacker's malicious
+  configurations or code remain effective across multiple system reboots.
+  Attacker does so by changing the variables containing individual boot
+  entries and defining the paths to bootloader files, the order in which boot
+  devices are accessed during the boot process, PK and KEK variables, etc
+evidence:
+  - name: EFI Development Kit
+    year: 2015
+    references:
+      - https://github.com/hackedteam/vector-edk
+  - name: PROTECT YOUR ORGANIZATION FROM MOSAICREGRESSOR AND OTHER UEFI IMPLANTS
+    year: 2020
+    references:
+      - https://eclypsium.com/wp-content/uploads/Protecting-Your-Organizations-From-MosaicRegressor.pdf
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+countermeasures:
+  - id: PM-01-08
+    name: Boot order verification
+    applicability: 1
+  - id: PM-01-14
+    name: Validate and restrict parsing of boot resources
+    applicability: 1
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 2
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 1
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 2
+  effectiveness: 1.36
+  level: Low

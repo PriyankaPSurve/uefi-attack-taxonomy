@@ -1,0 +1,26 @@
+id: UEFI-T0009
+name: Exploit Supply Chain
+type: technique
+tactic: UEFI-TA9003
+version_added: "1.0"
+description: >
+  Attackers compromise supply-chain components of UEFI systems to deliver a
+  malicious payload to the target system. This can be accomplished using the
+  following sub-techniques
+evidence:
+  - name: "Operation ShadowHammer: new supply chain attack threatens hundreds of thousands of users worldwide"
+    year: 2019
+    references:
+      - https://www.kaspersky.com/about/press-releases/2019_operation-shadowhammer-new-supply-chain-attack
+  - name: "Operation ShadowHammer: a high-profile supply chain attack"
+    year: 2019
+    references:
+      - https://securelist.com/operation-shadowhammer-a-high-profile-supply-chain-attack/90380/
+  - name: "YET ANOTHER UEFI BOOTKIT DISCOVERED: MEET COSMICSTRAND"
+    year: 2022
+    references:
+      - https://eclypsium.com/blog/yet-another-uefi-bootkit-discovered-meet-cosmicstrand/
+  - name: "LoJax: First UEFI rootkit found in the wild, courtesy of the Sednit group"
+    year: 2018
+    references:
+      - https://www.welivesecurity.com/2018/09/27/lojax-first-uefi-rootkit-found-wild-courtesy-sednit-group/

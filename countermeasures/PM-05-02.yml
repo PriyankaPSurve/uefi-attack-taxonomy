@@ -1,0 +1,18 @@
+id: PM-05-02
+name: Run only signed drivers
+family: PM-05
+family_name: Execution Control
+category: Preventive
+version_added: "1.0"
+description: >
+  Run only signed drivers. See the referenced guidance for detail.
+references:
+  - https://media.defense.gov/2019/Sep/09/2002180334/-1/-1/0/Enforce%20Signed%20Software%20Execution%20Policies%20-%20Copy.pdf
+  - https://uefi.org/specs/UEFI/2.9_A/32_Secure_Boot_and_Driver_Signing.html
+addresses:
+  - UEFI-T0014
+  - UEFI-T0016.001
+  - UEFI-T0016.003
+  - UEFI-T0020
+  - UEFI-T0025.003
+  - UEFI-T0035

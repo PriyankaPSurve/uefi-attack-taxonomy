@@ -1,0 +1,12 @@
+id: UEFI-TA9003
+name: Delivery
+version_added: "1.0"
+description: >
+  During this stage, the threat actor attempts to introduce, transmit, or
+  position the exploit or malicious component into the UEFI or pre-OS attack
+  surface. In this taxonomy, the Delivery tactic is limited to UEFI-specific
+  exploit delivery paths, such as supply-chain compromise, remote firmware
+  update paths, physical access, or network-reachable firmware interfaces.
+  More general command-and-control activity is outside the scope of this
+  UEFI-specific framework and is therefore not modeled as a separate tactic
+  here. This includes

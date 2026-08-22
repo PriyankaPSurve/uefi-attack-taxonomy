@@ -1,0 +1,75 @@
+id: UEFI-T0016.004
+name: Boot Resource Parsing Exploitation
+type: sub-technique
+tactic: UEFI-TA9004
+parent: UEFI-T0016
+version_added: "1.1"
+description: >
+  Attackers supply a malformed data file that platform firmware parses during
+  boot, causing memory corruption within the parser and yielding code
+  execution in the firmware's own privilege context. This differs from
+  Malicious Payload Injection (UEFI-T0016.003) in that no attacker-controlled
+  code is introduced into the firmware image or the boot path: the injected
+  artefact is data, and execution arises from a defect in the routine that
+  interprets it. The parsers concerned are frequently third-party components
+  executing in the DXE phase without the exploit mitigations customary in
+  operating-system code. LogoFAIL is the principal documented instance, in
+  which crafted boot logo images processed by vendor image parsers yielded
+  execution during platform initialisation
+evidence:
+  - name: "Finding LogoFAIL: The Dangers of Image Parsing During System Boot"
+    year: 2023
+    references:
+      - https://www.binarly.io/blog/finding-logofail-the-dangers-of-image-parsing-during-system-boot
+  - name: Just about every Windows and Linux device vulnerable to new LogoFAIL firmware attack
+    year: 2023
+    references:
+      - https://arstechnica.com/security/2023/12/just-about-every-windows-and-linux-device-vulnerable-to-new-logofail-firmware-attack/
+countermeasures:
+  - id: PM-01-03
+    name: BIOS integrity check
+    applicability: 1
+  - id: PM-01-04
+    name: Set flash descriptor region to Read-Only
+    applicability: 1
+  - id: PM-01-07
+    name: Memory access control
+    applicability: 2
+  - id: PM-01-09
+    name: Memory integrity verification
+    applicability: 2
+  - id: PM-01-11
+    name: Lock down SPI flash memory access
+    applicability: 1
+  - id: PM-01-14
+    name: Validate and restrict parsing of boot resources
+    applicability: 3
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 3
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-01-03
+    name: Scan for unauthorized memory access patterns
+    applicability: 2
+  - id: DM-01-06
+    name: Monitor unexpected Write operations to the flash descriptor
+    applicability: 1
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 3
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 2
+risk:
+  impact: 5
+  likelihood: 4
+  effectiveness: 1.93
+  level: Very high

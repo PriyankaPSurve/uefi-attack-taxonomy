@@ -1,0 +1,42 @@
+id: UEFI-T0028
+name: Peripheral Device Discovery
+type: technique
+tactic: UEFI-TA9007
+version_added: "1.0"
+description: >
+  Attackers identify peripheral devices connected to the target system, such
+  as USB devices, network adapters, or storage devices. This helps them
+  understand the potential post-exploitation avenues associated with these
+  devices
+evidence:
+  - name: "TrickBot's new 'TrickBoot' module infects your UEFI firmware"
+    year: 2020
+    references:
+      - https://www.bleepingcomputer.com/news/security/trickbots-new-trickboot-module-infects-your-uefi-firmware/
+countermeasures:
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 1
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+risk:
+  impact: 3
+  likelihood: 4
+  effectiveness: 1.29
+  level: High

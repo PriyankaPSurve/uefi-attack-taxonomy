@@ -1,0 +1,67 @@
+id: UEFI-T0016.003
+name: Malicious Payload Injection
+type: sub-technique
+tactic: UEFI-TA9004
+parent: UEFI-T0016
+version_added: "1.0"
+description: >
+  Attackers inject and execute malicious code within the UEFI firmware
+  environment through custom code or firmware updates
+evidence:
+  - name: LoJax UEFI Rootkit Used in Cyberespionage
+    year: 2018
+    references:
+      - https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/lojax-uefi-rootkit-used-in-cyberespionage
+  - name: Malware delivery through UEFI bootkit with MosaicRegressor
+    year: 2020
+    references:
+      - https://www.kaspersky.com/blog/mosaicregressor-uefi-malware/37252/
+  - name: Detecting UEFI Bootkits in the Wild (Part 1)
+    year: 2021
+    references:
+      - https://blogs.vmware.com/security/2021/06/detecting-uefi-bootkits-in-the-wild-part-1.html
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 2
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 2
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 1
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 3
+  - id: PM-05-02
+    name: Run only signed drivers
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-01-02
+    name: Monitor system during loading of a driver
+    applicability: 2
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 2
+risk:
+  impact: 5
+  likelihood: 4
+  effectiveness: 1.92
+  level: Very high

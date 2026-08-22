@@ -1,0 +1,54 @@
+id: UEFI-T0015
+name: DMA Attacks
+type: technique
+tactic: UEFI-TA9004
+version_added: "1.0"
+description: >
+  Attackers exploit the DMA capabilities (the ability to access memory
+  directly) of peripheral devices such as network interface cards, graphics
+  cards, and storage controllers to compromise UEFI firmware or the
+  underlying operating system. This leads to malicious code injection and
+  privilege escalation
+evidence:
+  - name: "A tour beyond BIOS: Using IOMMU for DMA protection in UEFI firmware"
+    year: 2017
+  - name: WikiLeaks Releases Data on CIA’s Apple Hacking Tools
+    year: 2017
+    references:
+      - https://www.securityweek.com/wikileaks-releases-data-cias-apple-hacking-tools/
+countermeasures:
+  - id: PM-01-06
+    name: Encrypt sensitive memory areas
+    applicability: 2
+  - id: PM-01-07
+    name: Memory access control
+    applicability: 3
+  - id: PM-01-09
+    name: Memory integrity verification
+    applicability: 2
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 1
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 2
+  - id: DM-01-03
+    name: Scan for unauthorized memory access patterns
+    applicability: 2
+  - id: DM-01-04
+    name: Monitor for memory patching attempts
+    applicability: 2
+  - id: DM-01-05
+    name: Monitor DMA access
+    applicability: 3
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+risk:
+  impact: 4
+  likelihood: 3
+  effectiveness: 1.90
+  level: High

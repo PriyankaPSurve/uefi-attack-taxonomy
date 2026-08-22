@@ -1,0 +1,15 @@
+id: PM-01-04
+name: Set flash descriptor region to Read-Only
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.0"
+description: >
+  Set flash descriptor region to Read-Only. See the referenced guidance for
+  detail.
+references:
+  - https://eclypsium.com/research/firmware-security-realizations-part-3-spi-write-protections/
+addresses:
+  - UEFI-T0011
+  - UEFI-T0016.004
+  - UEFI-T0018.001

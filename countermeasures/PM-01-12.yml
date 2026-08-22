@@ -1,0 +1,16 @@
+id: PM-01-12
+name: Full-disk encryption
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.0"
+description: >
+  Full-disk encryption. See the referenced guidance for detail.
+references:
+  - https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/bitlocker-countermeasures#uefi-and-secure-
+addresses:
+  - UEFI-T0011
+  - UEFI-T0036
+  - UEFI-T0039
+  - UEFI-T0041
+  - UEFI-T0042

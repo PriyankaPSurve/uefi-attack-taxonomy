@@ -1,0 +1,61 @@
+id: MM-01-01
+name: Investigation of Suspicious Activities
+family: MM-01
+family_name: Incident Response
+category: Mitigation
+version_added: "1.0"
+description: >
+  Investigation of Suspicious Activities. See the referenced guidance for
+  detail.
+references:
+  - https://uefi.org/sites/default/files/resources/UEFI%20Firmware%20-%20Security%20Concerns%20and%20Best%20Practices.pdf
+  - https://www.cisa.gov/sites/default/files/2024-03/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf
+addresses:
+  - UEFI-T0001
+  - UEFI-T0002
+  - UEFI-T0003
+  - UEFI-T0005
+  - UEFI-T0006
+  - UEFI-T0007
+  - UEFI-T0008.001
+  - UEFI-T0008.002
+  - UEFI-T0009.002
+  - UEFI-T0010
+  - UEFI-T0011
+  - UEFI-T0012
+  - UEFI-T0013
+  - UEFI-T0014
+  - UEFI-T0015
+  - UEFI-T0016.001
+  - UEFI-T0016.002
+  - UEFI-T0016.003
+  - UEFI-T0017
+  - UEFI-T0018.001
+  - UEFI-T0018.002
+  - UEFI-T0019
+  - UEFI-T0020
+  - UEFI-T0021
+  - UEFI-T0022
+  - UEFI-T0023
+  - UEFI-T0024
+  - UEFI-T0025.002
+  - UEFI-T0025.003
+  - UEFI-T0025.004
+  - UEFI-T0025.005
+  - UEFI-T0026
+  - UEFI-T0027
+  - UEFI-T0028
+  - UEFI-T0029
+  - UEFI-T0030
+  - UEFI-T0031
+  - UEFI-T0032
+  - UEFI-T0033
+  - UEFI-T0034
+  - UEFI-T0035
+  - UEFI-T0036
+  - UEFI-T0037
+  - UEFI-T0038
+  - UEFI-T0039
+  - UEFI-T0040
+  - UEFI-T0041
+  - UEFI-T0042

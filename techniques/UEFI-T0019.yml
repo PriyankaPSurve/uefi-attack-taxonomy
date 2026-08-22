@@ -1,0 +1,55 @@
+id: UEFI-T0019
+name: Platform Key Abuse
+type: technique
+tactic: UEFI-TA9005
+version_added: "1.0"
+description: >
+  Attackers sign malicious UEFI firmware, bootloaders, or drivers with a
+  compromised platform key, making them appear legitimate and trusted by the
+  UEFI. % By signing their malicious code with stolen platform keys,
+  attackers can bypass the secure boot process and gain persistence within
+  the system
+evidence:
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 1
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 1
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 3
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 1
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 2
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 3
+  - id: RM-01-02
+    name: Reissue cryptographic keys
+    applicability: 3
+risk:
+  impact: 3
+  likelihood: 1
+  effectiveness: 1.73
+  level: Low

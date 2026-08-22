@@ -1,0 +1,39 @@
+id: UEFI-T0023
+name: Code Obfuscation
+type: technique
+tactic: UEFI-TA9006
+version_added: "1.0"
+description: >
+  Attackers obfuscate malicious UEFI code to make it more difficult for
+  defenders to analyze and identify its purpose. Obfuscation techniques can
+  include encryption, encoding, or packing the code
+evidence:
+  - name: FinFisher spyware improves its arsenal with four levels of obfuscation, UEFI infection and more
+    year: 2021
+    references:
+      - https://www.kaspersky.com/about/press-releases/2021_finfisher-spyware-improves-its-arsenal-with-four-levels-of-obfuscation-uefi-infection-and-more
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+countermeasures:
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 3
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+risk:
+  impact: 2
+  likelihood: 4
+  effectiveness: 1.40
+  level: Moderate

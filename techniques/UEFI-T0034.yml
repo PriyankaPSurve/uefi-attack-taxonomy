@@ -1,0 +1,50 @@
+id: UEFI-T0034
+name: UEFI Settings Password
+type: technique
+tactic: UEFI-TA9009
+version_added: "1.0"
+description: >
+  UEFI implementations allow users to set passwords to protect UEFI settings.
+  Attackers attempt to extract or bypass these passwords to gain unauthorized
+  access to UEFI settings and credentials
+references:
+  - https://www.nsa.gov/portals/75/documents/what-we-do/cybersecurity/professional-resources/ctr-uefi-defensive-practices-guidance.pdf
+countermeasures:
+  - id: PM-03-01
+    name: Key management policy enforcement
+    applicability: 1
+  - id: PM-03-02
+    name: Implement robust Authentication Protocols
+    applicability: 2
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 3
+  - id: PM-03-04
+    name: Disable USB Boot
+    applicability: 1
+  - id: PM-03-05
+    name: Ensure Physical Security of Ports
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+  - id: MM-03-01
+    name: Revoke compromised credentials
+    applicability: 2
+  - id: RM-01-03
+    name: Restore credentials
+    applicability: 2
+risk:
+  impact: 2
+  likelihood: 4
+  effectiveness: 1.45
+  level: Moderate

@@ -1,0 +1,36 @@
+id: DM-02-02
+name: Conduct UEFI static analysis
+family: DM-02
+family_name: Anomaly Detection
+category: Detective
+version_added: "1.0"
+description: >
+  Conduct UEFI static analysis. See the referenced guidance for detail.
+references:
+  - https://www.binarly.io/blog/using-symbolic-execution-to-detect-uefi-firmware-vulnerabilities
+  - https://i.blackhat.com/eu-20/Wednesday/eu-20-Labunets-efiXplorer-Hunting-For-UEFI-Firmware-Vulnerabilities-At-Scale-With-Automated-Static-Analysis.pdf
+  - https://uefi.org/sites/default/files/resources/UEFI%20Firmware%20-%20Security%20Concerns%20and%20Best%20Practices.pdf
+addresses:
+  - UEFI-T0001
+  - UEFI-T0002
+  - UEFI-T0003
+  - UEFI-T0004.001
+  - UEFI-T0004.003
+  - UEFI-T0008.001
+  - UEFI-T0008.002
+  - UEFI-T0009.001
+  - UEFI-T0012
+  - UEFI-T0013
+  - UEFI-T0016.004
+  - UEFI-T0017
+  - UEFI-T0022
+  - UEFI-T0023
+  - UEFI-T0024
+  - UEFI-T0025.005
+  - UEFI-T0026
+  - UEFI-T0027
+  - UEFI-T0028
+  - UEFI-T0029
+  - UEFI-T0031
+  - UEFI-T0037
+  - UEFI-T0038

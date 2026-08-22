@@ -1,0 +1,48 @@
+id: UEFI-T0003
+name: Hardware and UEFI Inventory
+type: technique
+tactic: UEFI-TA9001
+version_added: "1.0"
+description: >
+  Threat actors gather information about the hardware components integrated
+  into the system, such as the motherboard, chipset, storage devices, and
+  network adapters. They also identify the firmware versions associated with
+  these components, as outdated drivers can be potential entry points for
+  exploitation . % Vulnerability Research (UEFI-T0005): Threat actors search
+  for vulnerabilities specific to the UEFI firmware, associated components,
+  or the system software stack. They may explore exploit databases, security
+  advisories, or forums to uncover vulnerabilities or exploits; or perform
+  their own original vulnerability research
+evidence:
+  - name: "TRICKBOT NOW OFFERS ‘TRICKBOOT’: PERSIST, BRICK, PROFIT"
+    year: 2020
+    references:
+      - https://eclypsium.com/wp-content/uploads/TrickBot-Now-Offers-TrickBoot-Persist-Brick-Profit.pdf
+  - name: "TrickBot's new 'TrickBoot' module infects your UEFI firmware"
+    year: 2020
+    references:
+      - https://www.bleepingcomputer.com/news/security/trickbots-new-trickboot-module-infects-your-uefi-firmware/
+countermeasures:
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+risk:
+  impact: 3
+  likelihood: 4
+  effectiveness: 1.67
+  level: High

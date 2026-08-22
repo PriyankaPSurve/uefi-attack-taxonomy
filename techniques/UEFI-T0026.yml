@@ -1,0 +1,58 @@
+id: UEFI-T0026
+name: Hooking UEFI API/Services
+type: technique
+tactic: UEFI-TA9007
+version_added: "1.0"
+description: >
+  Attackers hook UEFI services or redirect UEFI API calls to their own code.
+  This allows them to intercept and manipulate API calls and evade security
+  controls
+evidence:
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+  - name: "CosmicStrand: the discovery of a sophisticated UEFI firmware rootkit"
+    year: 2022
+    references:
+      - https://securelist.com/cosmicstrand-uefi-firmware-rootkit/106973/
+  - name: "UEFI threats moving to the ESP: Introducing ESPecter bootkit"
+    year: 2021
+    references:
+      - https://www.welivesecurity.com/2021/10/05/uefi-threats-moving-esp-introducing-especter-bootkit/
+countermeasures:
+  - id: PM-03-03
+    name: Access control to UEFI settings and features
+    applicability: 1
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-05-01
+    name: Software execution policy
+    applicability: 2
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 3
+  effectiveness: 1.50
+  level: Moderate

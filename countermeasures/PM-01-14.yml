@@ -1,0 +1,18 @@
+id: PM-01-14
+name: Validate and restrict parsing of boot resources
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.1"
+description: >
+  Bounds and format validation within the firmware routines that parse
+  attacker-reachable boot resources, including logo images, fonts and configuration
+  tables, together with disabling support for user-supplied boot resources where the
+  platform permits it. Signature-based controls do not apply to these artefacts,
+  because the processed artefact is data rather than code.
+references:
+  - https://uefi.org/sites/default/files/resources/UEFI%20March%20Webinar%20Secure%20Coding%20for%20UEFI%20Firmware.pdf
+  - https://www.binarly.io/blog/finding-logofail-the-dangers-of-image-parsing-during-system-boot
+addresses:
+  - UEFI-T0016.004
+  - UEFI-T0013

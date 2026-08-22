@@ -1,0 +1,14 @@
+id: PM-01-06
+name: Encrypt sensitive memory areas
+family: PM-01
+family_name: UEFI Hardening
+category: Preventive
+version_added: "1.0"
+description: >
+  Encrypt sensitive memory areas. See the referenced guidance for detail.
+references:
+  - https://uefi.org/sites/default/files/resources/Hardening%20the%20Core%20Enhanced%20Memory%20Protection_Beebe.pdf
+addresses:
+  - UEFI-T0015
+  - UEFI-T0036
+  - UEFI-T0039

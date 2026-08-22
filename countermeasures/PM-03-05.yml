@@ -1,0 +1,25 @@
+id: PM-03-05
+name: Ensure Physical Security of Ports
+family: PM-03
+family_name: Authentication, Authorization, Access Control
+category: Preventive
+version_added: "1.0"
+description: >
+  Ensure Physical Security of Ports. See the referenced guidance for detail.
+references:
+  - https://www.nsa.gov/portals/75/documents/what-we-do/cybersecurity/professional-resources/ctr-uefi-defensive-practices-guidance.pdf
+  - https://eclypsium.com/research/evil-maid-firmware-attacks-using-usb-debug/
+addresses:
+  - UEFI-T0005
+  - UEFI-T0011
+  - UEFI-T0014
+  - UEFI-T0015
+  - UEFI-T0018.001
+  - UEFI-T0020
+  - UEFI-T0021
+  - UEFI-T0025.004
+  - UEFI-T0028
+  - UEFI-T0030
+  - UEFI-T0034
+  - UEFI-T0039
+  - UEFI-T0040

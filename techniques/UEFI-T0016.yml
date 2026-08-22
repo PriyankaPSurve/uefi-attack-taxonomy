@@ -1,0 +1,22 @@
+id: UEFI-T0016
+name: Code Execution Attacks
+type: technique
+tactic: UEFI-TA9004
+version_added: "1.0"
+description: >
+  Code injection gives attackers the ability to execute arbitrary code on the
+  system by exploiting vulnerabilities in UEFI firmware or associated
+  components, using the following sub-techniques
+evidence:
+  - name: PEI stage backdoor for UEFI compatible firmware
+    year: 2022
+    references:
+      - https://github.com/Cr4sh/PeiBackdoor
+  - name: LoJax UEFI Rootkit Used in Cyberespionage
+    year: 2018
+    references:
+      - https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/lojax-uefi-rootkit-used-in-cyberespionage
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/

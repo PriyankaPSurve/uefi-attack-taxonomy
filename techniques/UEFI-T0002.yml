@@ -1,0 +1,55 @@
+id: UEFI-T0002
+name: UEFI Code Analysis and Vulnerability Research
+type: technique
+tactic: UEFI-TA9001
+version_added: "1.0"
+description: >
+  Threat actors analyze UEFI firmware code to identify potential security
+  weaknesses, such as known issues in outdated firmware versions , known
+  vulnerabilities , or misconfigurations
+evidence:
+  - name: "TRICKBOT NOW OFFERS ‘TRICKBOOT’: PERSIST, BRICK, PROFIT"
+    year: 2020
+    references:
+      - https://eclypsium.com/wp-content/uploads/TrickBot-Now-Offers-TrickBoot-Persist-Brick-Profit.pdf
+  - name: "LoJax: First UEFI rootkit found in the wild, courtesy of the Sednit group"
+    year: 2018
+    references:
+      - https://www.welivesecurity.com/2018/09/27/lojax-first-uefi-rootkit-found-wild-courtesy-sednit-group/
+  - name: "BlackLotus UEFI bootkit: Myth confirmed"
+    year: 2022
+    references:
+      - https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/
+countermeasures:
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 2
+  - id: PM-04-03
+    name: Implement UEFI Version Control
+    applicability: 1
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 3
+  - id: PM-04-05
+    name: Verify integrity of update tools
+    applicability: 1
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 3
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 1
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+risk:
+  impact: 3
+  likelihood: 4
+  effectiveness: 1.67
+  level: High

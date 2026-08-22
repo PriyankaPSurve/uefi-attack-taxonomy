@@ -1,0 +1,40 @@
+id: UEFI-T0024
+name: Payload Removal
+type: technique
+tactic: UEFI-TA9006
+version_added: "1.0"
+description: >
+  Attackers design their malware to remove malicious files after infecting
+  the target
+evidence:
+  - name: LoJax UEFI Rootkit Used in Cyberespionage
+    year: 2018
+    references:
+      - https://www.trendmicro.com/vinfo/us/security/news/cyber-attacks/lojax-uefi-rootkit-used-in-cyberespionage
+countermeasures:
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 1
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 1
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 1
+  - id: DM-02-02
+    name: Conduct UEFI static analysis
+    applicability: 1
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-01-02
+    name: Analyze security feature bypass
+    applicability: 1
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 1
+risk:
+  impact: 2
+  likelihood: 4
+  effectiveness: 1.14
+  level: Moderate

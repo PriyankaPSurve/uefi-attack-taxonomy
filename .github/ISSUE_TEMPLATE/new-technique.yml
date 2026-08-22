@@ -1,0 +1,96 @@
+name: Propose a new technique
+description: Propose a technique or sub-technique that no existing entry captures
+title: "[Technique] "
+labels: ["technique-proposal", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for behaviour you believe the taxonomy does not currently
+        capture. If you are adding a newly disclosed attack that fits an existing
+        technique, the "Report a new attack" form is quicker.
+
+        Proposals are assessed against the criteria in
+        [GOVERNANCE.md](../blob/main/GOVERNANCE.md).
+
+  - type: input
+    id: name
+    attributes:
+      label: Proposed name
+      placeholder: "Vulnerable Signed Binary Abuse"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: level
+    attributes:
+      label: Is this a technique or a sub-technique?
+      options:
+        - Technique (a distinct goal within a tactic)
+        - Sub-technique (a specific means of achieving an existing technique's goal)
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: tactic
+    attributes:
+      label: Which tactic does it belong to?
+      description: Tactic name or identifier. If a sub-technique, give the parent technique instead.
+      placeholder: "Defense Evasion (UEFI-TA9006), or parent UEFI-T0025"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What does the adversary do?
+      description: Describe the behaviour, not a specific attack. What is manipulated, and what is achieved?
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Documented evidence
+      description: >
+        At least one publicly documented attack, proof of concept or disclosed
+        vulnerability demonstrating this behaviour. Name it and give a reference.
+    validations:
+      required: true
+
+  - type: textarea
+    id: closest
+    attributes:
+      label: Which existing technique comes closest, and why does it not fit?
+      description: >
+        This is the most important field. Name the nearest existing entry and explain
+        what it fails to capture. Proposals without this are usually already covered.
+    validations:
+      required: true
+
+  - type: textarea
+    id: specificity
+    attributes:
+      label: Why is this firmware-specific?
+      description: >
+        Explain why this is a UEFI or firmware behaviour rather than a general
+        technique incidentally applied to firmware.
+    validations:
+      required: true
+
+  - type: textarea
+    id: countermeasures
+    attributes:
+      label: Which countermeasures apply, if any?
+      description: Optional. Existing countermeasures that address it, or a gap you think is unaddressed.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: The evidence I have cited is publicly available
+          required: true
+        - label: I have read the inclusion criteria in GOVERNANCE.md
+          required: true

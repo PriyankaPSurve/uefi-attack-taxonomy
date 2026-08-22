@@ -1,0 +1,23 @@
+id: UEFI-T0018
+name: UEFI Image Tampering
+type: technique
+tactic: UEFI-TA9004
+version_added: "1.0"
+description: >
+  Tampering with the firmware image is used to establish persistence, bypass
+  UEFI security features, create hidden backdoors within the firmware,
+  provide unauthorized access to the system, or compromise its security. The
+  following sub-techniques are observed at this stage
+evidence:
+  - name: "MoonBounce: the dark side of UEFI firmware"
+    year: 2022
+    references:
+      - https://securelist.com/moonbounce-the-dark-side-of-uefi-firmware/105468/
+  - name: "YET ANOTHER UEFI BOOTKIT DISCOVERED: MEET COSMICSTRAND"
+    year: 2022
+    references:
+      - https://eclypsium.com/blog/yet-another-uefi-bootkit-discovered-meet-cosmicstrand/
+  - name: Detecting UEFI Bootkits in the Wild (Part 1)
+    year: 2021
+    references:
+      - https://blogs.vmware.com/security/2021/06/detecting-uefi-bootkits-in-the-wild-part-1.html

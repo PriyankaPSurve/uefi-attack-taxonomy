@@ -1,0 +1,82 @@
+id: UEFI-T0018.002
+name: Malicious Remote Update
+type: sub-technique
+tactic: UEFI-TA9004
+parent: UEFI-T0018
+version_added: "1.0"
+description: >
+  Attackers exploit vulnerabilities in the UEFI remote update process to
+  inject malicious firmware updates by manipulating firmware update servers
+  or using social engineering tactics to trick users into applying the update
+evidence:
+  - name: "UPDATE: Operation ShadowHammer – Compromised ASUS Computers"
+    year: 2019
+    references:
+      - https://cert.europa.eu/publications/security-advisories/2019-007/
+  - name: "LoJax: First UEFI rootkit found in the wild, courtesy of the Sednit group"
+    year: 2018
+    references:
+      - https://www.welivesecurity.com/2018/09/27/lojax-first-uefi-rootkit-found-wild-courtesy-sednit-group/
+countermeasures:
+  - id: PM-01-01
+    name: Use Secure Boot
+    applicability: 1
+  - id: PM-01-02
+    name: Implement UEFI image signing
+    applicability: 3
+  - id: PM-01-03
+    name: BIOS integrity check
+    applicability: 2
+  - id: PM-04-01
+    name: Disable UEFI Version Rollback
+    applicability: 2
+  - id: PM-04-02
+    name: Patch and Update the UEFI Regularly
+    applicability: 2
+  - id: PM-04-03
+    name: Implement UEFI Version Control
+    applicability: 2
+  - id: PM-04-04
+    name: Implement vulnerability management program
+    applicability: 2
+  - id: PM-04-05
+    name: Verify integrity of update tools
+    applicability: 3
+  - id: PM-04-06
+    name: Check signature before applying UEFI update
+    applicability: 3
+  - id: PM-04-07
+    name: MFA for update process
+    applicability: 3
+  - id: PM-05-03
+    name: Firmware integrity
+    applicability: 2
+  - id: DM-01-07
+    name: Monitor UEFI logs
+    applicability: 2
+  - id: DM-02-01
+    name: Monitor for unusual activities
+    applicability: 2
+  - id: MM-01-01
+    name: Investigation of Suspicious Activities
+    applicability: 2
+  - id: MM-02-02
+    name: Disable compromised update paths
+    applicability: 3
+  - id: MM-03-01
+    name: Revoke compromised credentials
+    applicability: 2
+  - id: MM-03-02
+    name: Revoke compromised cryptographic keys
+    applicability: 2
+  - id: RM-01-01
+    name: Reflash UEFI
+    applicability: 3
+  - id: RM-01-02
+    name: Reissue cryptographic keys
+    applicability: 2
+risk:
+  impact: 5
+  likelihood: 3
+  effectiveness: 2.26
+  level: Moderate

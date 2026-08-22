@@ -1,0 +1,14 @@
+id: DM-01-06
+name: Monitor unexpected Write operations to the flash descriptor
+family: DM-01
+family_name: System Behavior Monitoring
+category: Detective
+version_added: "1.0"
+description: >
+  Monitor unexpected Write operations to the flash descriptor. See the
+  referenced guidance for detail.
+references:
+  - https://eclypsium.com/research/firmware-security-realizations-part-3-spi-write-protections/
+addresses:
+  - UEFI-T0016.004
+  - UEFI-T0018.001

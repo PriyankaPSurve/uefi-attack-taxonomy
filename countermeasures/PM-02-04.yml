@@ -1,0 +1,19 @@
+id: PM-02-04
+name: 3rd party component integrity check
+family: PM-02
+family_name: Supply Chain Security
+category: Preventive
+version_added: "1.0"
+description: >
+  3rd party component integrity check. See the referenced guidance for
+  detail.
+references:
+  - https://uefi.org/sites/default/files/resources/Vulnerability%20Management%20in%20UEFI_Mullen.pdf
+  - https://i.blackhat.com/USA21/Wednesday-Handouts/us-21-Safeguarding-UEFI-Ecosystem-Firmware-Supply-Chain-Is-Hardcoded.pdf
+addresses:
+  - UEFI-T0004.001
+  - UEFI-T0004.002
+  - UEFI-T0004.003
+  - UEFI-T0006
+  - UEFI-T0009.001
+  - UEFI-T0009.002

@@ -1,0 +1,7 @@
+id: UEFI-TA9004
+name: Exploitation
+version_added: "1.0"
+description: >
+  During this stage, the threat actor attempts to exploit the target system
+  by running malicious code or using native capabilities (e.g., "living off
+  the land" attacks)

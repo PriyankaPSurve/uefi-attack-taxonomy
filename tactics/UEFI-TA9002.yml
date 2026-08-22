@@ -1,0 +1,7 @@
+id: UEFI-TA9002
+name: Resource Development
+version_added: "1.0"
+description: >
+  During the resource development stage, threat actors use the information
+  obtained during reconnaissance to craft the tools and means needed to
+  achieve their campaign goals. In this context, they do the following
