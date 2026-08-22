@@ -6,7 +6,7 @@ style of MITRE ATT&CK. It decomposes the pre-boot attack surface into 10 tactics
 42 techniques and 18 sub-techniques, each grounded in publicly documented attacks,
 proofs of concept and disclosed vulnerabilities.
 
-**Current version: v1.1** · [![DOI](https://zenodo.org/badge/DOI/[DOI].svg)](https://doi.org/[DOI])
+**Current version: v1.1** · [![DOI](https://zenodo.org/badge/1342862024.svg)](https://doi.org/10.5281/zenodo.22058675)
 
 ---
 
@@ -87,12 +87,12 @@ See [CHANGELOG.md](CHANGELOG.md) for the full history.
 
 If you use this taxonomy, please cite the paper:
 
-> [AUTHORS]. Security Below the OS: A Security Analysis of UEFI.
+> Priyanka Prakash Surve, Oleg Brodth, Yuval Elovici, Asaf Shabtai. Security Below the OS: A Security Analysis of UEFI.
 > *Computers & Security*, [YEAR]. [DOI OR URL]
 
 and, where the specific version matters, the archived release:
 
-> [AUTHORS]. UEFI Attack Taxonomy (Version 1.1) [Data set]. Zenodo. https://doi.org/[DOI]
+> > Priyanka Prakash Surve. UEFI Attack Taxonomy (Version 1.1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22058675
 
 ## Licence
 
@@ -102,7 +102,7 @@ you give appropriate credit.
 
 ## Maintainer
 
-Maintained by [NAME], [INSTITUTION] — [EMAIL].
+Maintained by Priyanka Prakash Surve, Ben Gurion University of the Negev — surve@post.bgu.ac.il.
 
 Contributions are welcome, and I would be glad to see maintenance become a community
 effort as the framework matures.
